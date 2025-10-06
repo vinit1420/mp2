@@ -1,0 +1,158 @@
+/* Center everything in screen */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  /* 🎨 Your full-page background image */
+  background-image: url("bg.jpg");
+  background-size: cover;        /* fill entire screen */
+  background-position: center;   /* keep centered */
+  background-repeat: no-repeat;  /* avoid tiling */
+
+  /* Optional: darker overlay to make content stand out */
+  position: relative;
+  overflow: hidden;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* semi-transparent layer */
+  z-index: 0; /* sits behind content */
+}
+
+.pokemon-logo {
+  display: block;
+  margin: 0 auto 20px auto; /* centers and adds space below */
+  width: 220px; /* adjust for size */
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.pokemon-logo:hover {
+  transform: scale(1.05);
+}
+
+.pokedex-container {
+  width: 500px; /* was 420px — slightly smaller to fit better */
+  position: relative;
+  z-index: 1; /* ensures it’s above the background */
+  transition: all 0.3s ease;
+  margin-top: 120px; /* pushes the content downward */
+
+}
+
+/* Heading */
+.pokedex-container h2 {
+  margin: 0 auto 20px auto; /* centers and adds space below */
+  color: #1a1a1a;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Filters */
+.top-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.top-filters select {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.top-filters select:hover {
+  border-color: #ef5350;
+  box-shadow: 0 0 5px rgba(239, 83, 80, 0.3);
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  padding: 10px 15px;
+  width: 260px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: #ef5350;
+  outline: none;
+  box-shadow: 0 0 6px rgba(239, 83, 80, 0.4);
+}
+
+/* Dropdown list */
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 220px; /* reserves space so nothing shifts */
+}
+
+.suggestion-list {
+  position: absolute; /* stack on top of reserved space */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+  width: 280px;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.suggestion-list li {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-list li:last-child {
+  border-bottom: none;
+}
+
+.suggestion-list li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.suggestion-list li:hover {
+  background-color: #f4f4f4;
+}
+
+.sprite {
+  border-radius: 50%;
+  background: #f1f1f1;
+  padding: 3px;
+}

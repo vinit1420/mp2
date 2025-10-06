@@ -1,0 +1,44 @@
+.gallery {
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+/* 🔥 Type Navigation Bar */
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.type-nav button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #eee;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.type-nav button:hover {
+  background-color: #d6d6d6;
+}
+
+.type-nav button.active {
+  background-color: #ef5350; /* red accent for selected */
+  color: white;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}

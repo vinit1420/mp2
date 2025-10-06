@@ -1,14 +1,12 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import PokemonDetail from "./pages/PokemonDetail";
 import Navbar from "./components/Navbar";
-import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/mp2">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

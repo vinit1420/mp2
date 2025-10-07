@@ -34,7 +34,7 @@ const Gallery: React.FC = () => {
       setLoading(true);
       try {
         if (selectedType === "all") {
-          const res = await api.get("pokemon?limit=151");
+          const res = await api.get("pokemon?limit=500");
           setPokemons(res.data.results);
         } else {
           const res = await api.get<TypeResponse>(`type/${selectedType}`);

@@ -1,44 +1,74 @@
 .gallery {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  color: #333;
 }
 
-h2 {
-  margin-bottom: 15px;
+/* Title */
+.gallery h2 {
+  font-size: 2rem;
+  color: #ef5350;
+  margin-bottom: 25px;
 }
 
-/* 🔥 Type Navigation Bar */
-.type-nav {
+/* Type Navbar */
+.type-navbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-.type-nav button {
-  border: none;
+.type-btn {
   padding: 8px 14px;
-  border-radius: 20px;
-  font-weight: bold;
-  background-color: #eee;
-  color: #333;
+  border: none;
+  border-radius: 6px;
+  background-color: #f4f4f4;
   cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
   transition: all 0.2s ease;
 }
 
-.type-nav button:hover {
-  background-color: #d6d6d6;
-}
-
-.type-nav button.active {
-  background-color: #ef5350; /* red accent for selected */
+.type-btn:hover {
+  background-color: #ef5350;
   color: white;
 }
 
-.gallery-grid {
+.active-type {
+  background-color: #ef5350;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Sort Filters */
+.top-filters {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 15px;
+  margin-bottom: 30px;
+}
+
+.top-filters select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.top-filters select:hover {
+  border-color: #ef5350;
+  box-shadow: 0 0 5px rgba(239, 83, 80, 0.3);
+}
+
+/* Pokémon Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }

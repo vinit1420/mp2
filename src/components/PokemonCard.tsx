@@ -5,6 +5,7 @@ import "./PokemonCard.css";
 
 interface Props {
   name: string;
+  url: string;
 }
 
 interface PokemonData {
